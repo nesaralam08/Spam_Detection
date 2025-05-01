@@ -8,7 +8,7 @@ function Home() {
         setLoading(true)
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/api/predict", {
+            const response = await axios.post("https://spam-detection-backend.vercel.app/api/predict", {
                 email: emailText,
             });
             setPrediction(response.data.prediction);
